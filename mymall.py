@@ -11,6 +11,12 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix 
 
+st.header("My first Streamlit App")
+st.write(pd.DataFrame({
+    'Intplan': ['yes', 'yes', 'yes', 'no'],
+    'Churn Status': [0, 0, 0, 1]
+}))
+
 # DATA EXPLORATION
 m_cust = pd.read_csv('mall_customer.csv')
 # m_stud = pd.read_csv('/content/student_mat.csv')
