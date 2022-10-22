@@ -57,7 +57,7 @@ confusion_matrix(ytest, y_model)
 #Confusion Matrix
 confusion_matrix = metrics.confusion_matrix(ytest, y_model)
 
-print(confusion_matrix)
+st.write(confusion_matrix)
 
 cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix,display_labels=np.unique(y_cust))
 
