@@ -14,7 +14,7 @@ from sklearn.metrics import confusion_matrix
 m_cust = pd.read_csv('mall_customer.csv')
 # m_stud = pd.read_csv('/content/student_mat.csv')
 
-display(m_cust)
+# display(m_cust)
 # display(m_stud)
 
 m_cust.head()
