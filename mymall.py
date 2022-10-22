@@ -62,8 +62,8 @@ st.write(confusion_matrix)
 cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix,display_labels=np.unique(y_cust))
 
 cm_display.plot()
-plt.show()
+st.plt.show()
 
 #from sklearn.metrics import classification_report
 # F1 score = 2 / [ (1/precision) + (1/ recall)]
-print(classification_report(ytest, y_model)) 
+st.write(classification_report(ytest, y_model)) 
