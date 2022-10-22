@@ -7,3 +7,5 @@ st.write(pd.DataFrame({
     'Intplan': ['yes', 'yes', 'yes', 'no'],
     'Churn Status': [0, 0, 0, 1]
 }))
+iris = sns.load_dataset('iris')
+sns.boxplot(data=iris)
