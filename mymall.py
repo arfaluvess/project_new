@@ -12,10 +12,6 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix 
 
 st.header("Machine Learning Application")
-st.write(pd.DataFrame({
-    'Intplan': ['yes', 'yes', 'yes', 'no'],
-    'Churn Status': [0, 0, 0, 1]
-}))
 
 # DATA EXPLORATION
 m_cust = pd.read_csv('mall_customer.csv')
