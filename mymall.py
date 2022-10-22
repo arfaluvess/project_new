@@ -1,5 +1,6 @@
 # IMPORT LIBRARY
 import streamlit as st
+import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -54,7 +55,7 @@ confusion_matrix = metrics.confusion_matrix(ytest, y_model)
 
 print(confusion_matrix)
 
-cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix,display_labels=np.unique(y_iris))
+cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix,display_labels=np.unique(y_cust))
 
 cm_display.plot()
 plt.show()
