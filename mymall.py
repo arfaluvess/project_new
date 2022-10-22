@@ -12,6 +12,10 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix 
 
 st.header("Machine Learning Application")
+st.write(pd.DataFrame({
+    'Intplan': ['yes', 'yes', 'yes', 'no'],
+    'Churn Status': [0, 0, 0, 1]
+}))
 
 # DATA EXPLORATION
 m_cust = pd.read_csv('mall_customer.csv')
@@ -40,19 +44,17 @@ y_model = model.predict(Xtest)             # 4. predict on new data
 y_model
 
 #from sklearn.metrics import accuracy_score
-accuracy_score(ytest, y_model)
+acc=accuracy_score(ytest, y_model)
+st.write(acc)
 
 #from sklearn.metrics import classification_report
 print(classification_report(ytest, y_model)) 
 
 # Confusion Matrix
-from sklearn.metrics import confusion_matrix 
+# from sklearn.metrics import confusion_matrix 
 confusion_matrix(ytest, y_model)
 
 #Confusion Matrix
-#import matplotlib.pyplot as plt
-#from sklearn import metrics
-#import numpy as np
 confusion_matrix = metrics.confusion_matrix(ytest, y_model)
 
 print(confusion_matrix)
