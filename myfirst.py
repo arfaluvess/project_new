@@ -9,5 +9,5 @@ st.write(pd.DataFrame({
     'Churn Status': [0, 0, 0, 1]
 }))
 
-iris = sns.load_dataset('iris')
+iris = pd.read_csv('https://github.com/arfaluvess/project_new/blob/d1c562635e29fe6a40ca028b12f11781d8b21e00/iris.csv')
 sns.boxplot(data=iris)
