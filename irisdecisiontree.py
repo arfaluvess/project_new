@@ -17,7 +17,7 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix 
 from sklearn.metrics import plot_confusion_matrix
 
-st.header("Machine Learning Application - SVM AND DECISION TREE")
+st.header("DECISION TREE INFORMATION SUPERVISE ML")
 
 # SVM DATASET
 iris = sns.load_dataset('iris') # returns a pandas dataframe
@@ -69,6 +69,8 @@ st.pyplot(fig)
 
 # F1 score = 2 / [ (1/precision) + (1/ recall)]
 st.write(classification_report(y_test, y_model)) 
+
+st.header("INFORMATION ON DECISION TREE")
 
 # DECISION TREE
 Xtrain, Xtest, ytrain, ytest = train_test_split(X_iris, y_iris,random_state=1)
