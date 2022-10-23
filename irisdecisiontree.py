@@ -62,9 +62,9 @@ cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = n_cm,display_labe
 # cm_display.plot()
 # st.pyplot(fig)
 
-fig, ax = plt.subplots()
-sns.heatmap(cm_display.plot(), ax=ax)
-st.pyplot(fig)
+fig, ax = plt.subplots(figsize=(10,10))
+st.write(sns.heatmap(df.corr(), annot=True,linewidths=0.5))
+st.pyplot()
 
 # F1 score = 2 / [ (1/precision) + (1/ recall)]
 st.write(classification_report(y_test, y_model)) 
