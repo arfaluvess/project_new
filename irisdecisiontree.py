@@ -57,8 +57,8 @@ n_cm = metrics.confusion_matrix(y_test, y_model)
 st.write(n_cm)
 
 cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = n_cm,display_labels=np.unique(y_iris))
-cm_display.plot()
 fig=plt.figure(figsize=(15,8))
+cm_display.plot()
 plt.pyplot(fig)
 
 # F1 score = 2 / [ (1/precision) + (1/ recall)]
