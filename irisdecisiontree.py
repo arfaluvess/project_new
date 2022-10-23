@@ -69,5 +69,9 @@ clf = clf.fit(Xtrain, ytrain)
 
 st.write(clf.fit(Xtrain, ytrain))   
 
-st.write(clf.score(Xtest, ytest))
+clf.score(Xtest, ytest)
 st.write(clf)
+
+fig=plt.figure(figsize=(15,8))
+tree.plot_tree(clf.fit(Xtrain, ytrain))
+st.pyplot(fig)
