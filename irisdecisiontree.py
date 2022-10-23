@@ -63,6 +63,7 @@ cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = n_cm,display_labe
 # st.pyplot(fig)
 
 fig, ax = plt.subplots(figsize=(10,10))
+cm_display.plot()
 st.write(sns.heatmap(iris.corr(), annot=True,linewidths=0.5))
 st.pyplot(fig)
 
