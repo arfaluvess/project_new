@@ -58,7 +58,7 @@ cm_display.plot()
 plt.show()
 
 # F1 score = 2 / [ (1/precision) + (1/ recall)]
-print(classification_report(y_test, y_model)) 
+st.write(classification_report(y_test, y_model)) 
 
 # DECISION TREE
 Xtrain, Xtest, ytrain, ytest = train_test_split(X_iris, y_iris,random_state=1)
