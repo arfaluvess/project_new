@@ -3,6 +3,7 @@ import streamlit as st
 import seaborn as sns
 import pandas as pd
 import numpy as np
+import plotly.express as px
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
 from sklearn import tree
@@ -65,7 +66,7 @@ cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = n_cm,display_labe
 fig, ax = plt.subplots(figsize=(10,10))
 st.write(sns.heatmap(iris.corr(), annot=True,linewidths=0.5))
 cm_display.plot()
-st.pyplot(fig)
+px.imshow(fig)
 
 # F1 score = 2 / [ (1/precision) + (1/ recall)]
 st.write(classification_report(y_test, y_model)) 
@@ -78,9 +79,7 @@ clf = tree.DecisionTreeClassifier()
 clf = clf.fit(Xtrain, ytrain)
 
 st.write(clf.fit(Xtrain, ytrain))   
-
 clf.score(Xtest, ytest)
-st.write(clf)
 
 fig=plt.figure(figsize=(15,8))
 tree.plot_tree(clf.fit(Xtrain, ytrain))
