@@ -69,5 +69,5 @@ clf = clf.fit(Xtrain, ytrain)
 
 clf.fit(Xtrain, ytrain)   
 
-clf.score(Xtest, ytest)
+st.write(clf.score(Xtest, ytest))
 st.write(clf)
