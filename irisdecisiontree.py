@@ -15,6 +15,7 @@ from sklearn.datasets import load_iris
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix 
+from sklearn.metrics import plot_confusion_matrix
 
 st.header("Machine Learning Application - SVM AND DECISION TREE")
 
@@ -57,9 +58,13 @@ n_cm = metrics.confusion_matrix(y_test, y_model)
 st.write(n_cm)
 
 cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = n_cm,display_labels=np.unique(y_iris))
-fig=plt.figure(figsize=(15,8))
-a=cm_display.plot()
-st.pyplot(a)
+# fig, ax = plt.subplots()
+# cm_display.plot()
+# st.pyplot(fig)
+
+fig, ax = plt.subplots()
+sns.heatmap(cm_display.plot(), ax=ax)
+st.write(fig)
 
 # F1 score = 2 / [ (1/precision) + (1/ recall)]
 st.write(classification_report(y_test, y_model)) 
