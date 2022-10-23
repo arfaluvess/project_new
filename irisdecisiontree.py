@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
+from sklearn import tree
 from sklearn.tree import plot_tree
 from sklearn import metrics
 from sklearn.naive_bayes import GaussianNB
