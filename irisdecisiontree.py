@@ -15,7 +15,7 @@ from sklearn.datasets import load_iris
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix 
-from sklearn.metrics import plot_confusion_matrix
+from sklearn.model_selection import cross_val_score
 
 # Title and Subheader
 st.title("Iris EDA App")
