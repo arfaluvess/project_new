@@ -13,17 +13,19 @@ import pandas as pd
 import seaborn as sns
 from sklearn.cluster import KMeans 
 
-mall_df = pd.read_csv('/content/mall_customer.csv')
+mall_df = pd.read_csv('mall_customer.csv')
 mall_df.head()
 
 X = mall_df[['Annual_Income_(k$)','Spending_Score']]
+st.write(X)
 
 # Scatterplot of the input data
-plt.figure(figsize=(10, 6))
+fig=plt.figure(figsize=(10, 6))
 sns.scatterplot(X['Annual_Income_(k$)'], X['Spending_Score']);
 plt.xlabel('Annual Income (k$)')
 plt.ylabel('Spending Score (1-100)') 
 plt.title('Spending Score (1-100) vs Annual Income (k$)')
+st.pyplot(fig)
 
 # Find the KMeans of Mall Customer
 wcss=[]
