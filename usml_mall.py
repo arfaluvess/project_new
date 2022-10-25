@@ -23,7 +23,7 @@ st.write(X)
 
 # Scatterplot of the input data
 fig=plt.figure(figsize=(10, 6))
-sns.scatterplot(X['Annual_Income_(k$)'], X['Spending_Score']);
+sns.scatterplot(x='Annual_Income_(k$)', y='Spending_Score', data=X)
 plt.xlabel('Annual Income (k$)')
 plt.ylabel('Spending Score (1-100)') 
 plt.title('Spending Score (1-100) vs Annual Income (k$)')
