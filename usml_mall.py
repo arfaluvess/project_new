@@ -14,6 +14,8 @@ import pandas as pd
 import seaborn as sns
 from sklearn.cluster import KMeans 
 
+st.title('Unsupervised Machine Learning')
+
 mall_df = pd.read_csv('mall_customer.csv')
 st.write(mall_df.head())
 
