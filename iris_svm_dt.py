@@ -42,7 +42,7 @@ st.write('Accuracy of RBF SVC classifier on training set: {:.2f}'
 st.write('Accuracy of RBF SVC classifier on test set: {:.2f}'
      .format(clf.score(X_test, y_test)))
 
-st.header('INFORMATION ON USING NAIVE BAYES)
+st.header('INFORMATION ON USING NAIVE BAYES')
 # from sklearn.naive_bayes import GaussianNB # 1. choose model class
 model = GaussianNB()                       # 2. instantiate model
 model.fit(X_train, y_train)                  # 3. fit model to data
