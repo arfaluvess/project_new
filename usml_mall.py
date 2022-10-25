@@ -44,7 +44,7 @@ plt.plot(range(1,11),wcss, linewidth=2, color="red", marker ="8")
 plt.xlabel("K Value")
 plt.xticks(np.arange(1,11,1))
 plt.ylabel("WCSS")
-plt.pyplot(fig)
+st.pyplot(fig)
 
 #Taking 5 clusters
 km1=KMeans(n_clusters=5)
