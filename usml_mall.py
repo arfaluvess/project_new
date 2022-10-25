@@ -35,16 +35,16 @@ for i in range(1,11):
     km=KMeans(n_clusters=i)
     km.fit(X)
     wcss.append(km.inertia_)
-    print(wcss)
+    st.write(wcss)
 
 #The elbow curve
-plt.figure(figsize=(12,6))
+fig=plt.figure(figsize=(12,6))
 plt.plot(range(1,11),wcss)
 plt.plot(range(1,11),wcss, linewidth=2, color="red", marker ="8")
 plt.xlabel("K Value")
 plt.xticks(np.arange(1,11,1))
 plt.ylabel("WCSS")
-plt.show()
+plt.pyplot(fig)
 
 #Taking 5 clusters
 km1=KMeans(n_clusters=5)
@@ -55,12 +55,12 @@ y=km1.predict(X)
 #adding the labels to a column named label
 mall_df["label"] = y
 #The new dataframe with the clustering done
-mall_df.head()
+st.write(mall_df.head())
 
 #Scatterplot of the clusters
-plt.figure(figsize=(10,6))
+fig=plt.figure(figsize=(10,6))
 sns.scatterplot(x = 'Annual_Income_(k$)',y = 'Spending_Score',hue="label", palette=['green','orange','brown','dodgerblue','red'], legend='full',data = mall_df  ,s = 60 )
 plt.xlabel('Annual Income (k$)')
 plt.ylabel('Spending Score (1-100)') 
 plt.title('Spending Score (1-100) vs Annual Income (k$)')
-plt.show()
+plt.pyplot(fig)
