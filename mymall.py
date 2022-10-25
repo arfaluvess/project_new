@@ -26,8 +26,8 @@ m_cust = pd.read_csv('mall_customer.csv')
 
 st.write(m_cust.head())
 st.write(m_cust.tail())
-st.write(m_cust.describe(include='all'))
-st.write(m_cust.info())
+# st.write(m_cust.describe(include='all'))
+# st.write(m_cust.info())
 
 X_cust = m_cust.drop(['CustomerID','Genre'], axis=1)  
 X_cust
