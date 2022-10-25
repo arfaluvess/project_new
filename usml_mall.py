@@ -63,4 +63,4 @@ sns.scatterplot(x = 'Annual_Income_(k$)',y = 'Spending_Score',hue="label", palet
 plt.xlabel('Annual Income (k$)')
 plt.ylabel('Spending Score (1-100)') 
 plt.title('Spending Score (1-100) vs Annual Income (k$)')
-plt.pyplot(fig)
+st.pyplot(fig)
