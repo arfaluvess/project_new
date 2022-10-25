@@ -57,6 +57,8 @@ confusion_matrix = metrics.confusion_matrix(ytest, y_model)
 st.write(confusion_matrix)
 cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix,display_labels=np.unique(y_cust))
 
+fig, ax = plt.subplots(figsize=(10,10))
+st.write(sns.heatmap(cm_display, annot=True,linewidths=0.5))
 cm_display.plot()
 st.pyplot(fig)
 
