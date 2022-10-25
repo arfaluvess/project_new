@@ -7,6 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1ZH4Gn3FEG2Zwc2Pg5l5zs7rrpjSyRJ1b
 """
 
+import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -14,7 +15,8 @@ import seaborn as sns
 from sklearn.cluster import KMeans 
 
 mall_df = pd.read_csv('mall_customer.csv')
-mall_df.head()
+st.write(mall_df.head())
+
 
 X = mall_df[['Annual_Income_(k$)','Spending_Score']]
 st.write(X)
