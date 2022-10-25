@@ -22,7 +22,7 @@ st.title("Iris EDA App")
 st.subheader("EDA Web App with Streamlit ")
 
 # PROBABILITY USING SVM 
-st.header('INFORMATION PROBABILITY USING SVM')
+st.header('PREPARATION OF DATA')
 # SVM DATASET
 iris = sns.load_dataset('iris') # returns a pandas dataframe
 X_iris = iris.drop('species', axis=1)  
@@ -42,24 +42,25 @@ st.write('Accuracy of RBF SVC classifier on training set: {:.2f}'
 st.write('Accuracy of RBF SVC classifier on test set: {:.2f}'
      .format(clf.score(X_test, y_test)))
 
+st.header('INFORMATION ON USING NAIVE BAYES)
 # from sklearn.naive_bayes import GaussianNB # 1. choose model class
-# model = GaussianNB()                       # 2. instantiate model
-# model.fit(X_train, y_train)                  # 3. fit model to data
-# y_model = model.predict(X_test)             # 4. predict on new data
-# y_model
+model = GaussianNB()                       # 2. instantiate model
+model.fit(X_train, y_train)                  # 3. fit model to data
+y_model = model.predict(X_test)             # 4. predict on new data
+y_model
 
-# # Accuracy score
-# st.write(accuracy_score(y_test, y_model))
+# Accuracy score
+st.write(accuracy_score(y_test, y_model))
 
-# # Classification report finding
-# st.write(classification_report(y_test, y_model)) 
+# Classification report finding
+st.write(classification_report(y_test, y_model)) 
 
-# # Confusion Matrix
-# confusion_matrix(y_test, y_model)
+# Confusion Matrix
+confusion_matrix(y_test, y_model)
 
-# #Confusion Matrix
-# n_cm = metrics.confusion_matrix(y_test, y_model)
-# st.write(n_cm)
+#Confusion Matrix
+n_cm = metrics.confusion_matrix(y_test, y_model)
+st.write(n_cm)
 
 # cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = n_cm,display_labels=np.unique(y_iris))
 # # fig, ax = plt.subplots()
