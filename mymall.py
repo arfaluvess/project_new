@@ -12,10 +12,10 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix 
 
 st.header("Machine Learning Application")
-st.write(pd.DataFrame({
-    'Intplan': ['yes', 'yes', 'yes', 'no'],
-    'Churn Status': [0, 0, 0, 1]
-}))
+# st.write(pd.DataFrame({
+#     'Intplan': ['yes', 'yes', 'yes', 'no'],
+#     'Churn Status': [0, 0, 0, 1]
+# }))
 
 # DATA EXPLORATION
 m_cust = pd.read_csv('mall_customer.csv')
@@ -24,10 +24,10 @@ m_cust = pd.read_csv('mall_customer.csv')
 # display(m_cust)
 # display(m_stud)
 
-m_cust.head()
-m_cust.tail()
-m_cust.describe(include='all')
-m_cust.info()
+st.write(m_cust.head())
+st.write(m_cust.tail())
+st.write(m_cust.describe(include='all'))
+st.write(m_cust.info())
 
 X_cust = m_cust.drop(['CustomerID','Genre'], axis=1)  
 X_cust
@@ -58,7 +58,7 @@ st.write(confusion_matrix)
 cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix,display_labels=np.unique(y_cust))
 
 cm_display.plot()
-st.pyplot.show()
+st.pyplot(fig)
 
 # F1 score = 2 / [ (1/precision) + (1/ recall)]
 st.write(classification_report(ytest, y_model)) 
