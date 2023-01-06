@@ -60,7 +60,7 @@ mall_df["label"] = y
 st.write(mall_df.head())
 
 #Scatterplot of the clusters
-fig=plt.figure(figsize=(10,6))
+fig=plt.figure(figsize=(10,6)) 
 sns.scatterplot(x = 'Annual_Income_(k$)',y = 'Spending_Score',hue="label", palette=['green','orange','brown','dodgerblue','red'], legend='full',data = mall_df  ,s = 60 )
 plt.xlabel('Annual Income (k$)')
 plt.ylabel('Spending Score (1-100)') 
