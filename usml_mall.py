@@ -7,6 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1ZH4Gn3FEG2Zwc2Pg5l5zs7rrpjSyRJ1b
 """
 
+import sklearn
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
